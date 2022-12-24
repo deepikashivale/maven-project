@@ -6,10 +6,10 @@ stage ('Stage1: SCM Checkout')             //download the code
 {steps{git branch: 'master' , url: 'https://github.com/deepikashivale/maven-project.git' }}    //if no branch defined then by default it will download from master
 
 stage ('Stage2: Test the Code')
-{steps{withMaven(globalMavenSettingsConfig: '--- Use system default settings or file path ---', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '--- Use system default settings or file path ---') 
+{steps{withMaven(globalMavenSettingsConfig: 'fcee6e46-273c-4d32-b3ad-288e1b70f59a', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: 'e60d62d0-dc77-49d2-9393-fea1c9fb6a8d') 
 {sh 'mvn test'}
 }}
-}
+
 
 //stage ('Stage2: Execute Unit Test Framework')
 //{steps{sh 'mvn clean package'}}
@@ -20,6 +20,5 @@ stage ('Stage2: Test the Code')
 
 
 
-
 }
-
+}
