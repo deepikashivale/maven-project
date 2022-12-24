@@ -12,7 +12,7 @@ stage ('Stage2: Execute Unit Test Framework')
 
 stage ('Stage3: Create Deployable Package')
 {steps{withMaven(globalMavenSettingsConfig: 'fcee6e46-273c-4d32-b3ad-288e1b70f59a', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: 'e60d62d0-dc77-49d2-9393-fea1c9fb6a8d') 
-{sh 'mvn clean packeage'}
+{sh 'mvn clean package'}
 }}
 
 
