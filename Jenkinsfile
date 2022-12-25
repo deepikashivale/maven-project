@@ -16,7 +16,7 @@ stage ('Stage3: Create Deployable Package')
 }}
 
 stage ('Stage4: Deploy Package to Dev Environment')
-{steps{ sshagent(['a6ac4d02-766a-49f8-8025-b1aa2a249ef6']) {
+{steps{ sshagent(['tomcat']) {
    sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@13.127.169.162:/var/lib/tomcat/webapps' 
 } }}
 
